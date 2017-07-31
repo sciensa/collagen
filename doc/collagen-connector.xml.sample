@@ -1,0 +1,6 @@
+<!-- BEGIN_INCLUDE(collagen:greet) -->
+    <collagen:greet config-ref="" friend="#[map-payload:friend]" />
+<!-- END_INCLUDE(collagen:greet) -->
+<!-- BEGIN_INCLUDE(collagen:add-entity) -->
+    <collagen:add-entity config-ref="" key="id1"/>
+<!-- END_INCLUDE(collagen:add-entity) -->
