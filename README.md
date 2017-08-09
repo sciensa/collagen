@@ -1,5 +1,7 @@
 # Collagen Anypoint Connector
 
+Required DevKit - http://studio.mulesoft.org/r4/devkit install in your Annypoint Studio.
+
 [Connector description including destination service or application with]
 
 # Mule supported versions
