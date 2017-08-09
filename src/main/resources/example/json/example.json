@@ -1,0 +1,18 @@
+{
+  	"vendor":"Luis Filipe",
+	"store":"Americanas",  
+	"oslist": [{
+			"so": "Windows 10",
+			"name": "Microsoft"
+		},
+		{
+			"so": "MacOS Leopard",
+			"name": "Apple"
+		},
+		{
+			"so": "Android Kit KAt",
+			"name": "Google"
+		}
+	],
+	"price":"500,00"
+}

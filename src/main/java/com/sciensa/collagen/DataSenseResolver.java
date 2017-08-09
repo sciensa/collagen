@@ -30,7 +30,7 @@ public class DataSenseResolver {
      */
     @Inject
     private CollagenConnector connector;
-
+    
     /**
      * Retrieves the list of keys
      */
@@ -39,19 +39,12 @@ public class DataSenseResolver {
         List<MetaDataKey> keys = new ArrayList<MetaDataKey>();
 
         //Generate the keys
-        keys.add(new DefaultMetaDataKey("ENTITY_TYPE_1", "User"));
-        keys.add(new DefaultMetaDataKey("ENTITY_TYPE_2", "Book"));
+        // keys.add(new DefaultMetaDataKey("ENTITY_TYPE_1", "User"));
+        // keys.add(new DefaultMetaDataKey("ENTITY_TYPE_2", "Book"));
 
         return keys;
     }
-
-    /**
-     * Get MetaData given the Key the user selects
-     * 
-     * @param key The key selected from the list of valid keys
-     * @return The MetaData model of that corresponds to the key
-     * @throws Exception If anything fails
-     */
+    
     @MetaDataRetriever
     public MetaData getMetaData(MetaDataKey key) throws Exception {
         DefaultMetaDataBuilder builder = new DefaultMetaDataBuilder();
@@ -61,14 +54,16 @@ public class DataSenseResolver {
         //If you use maps as input of your processors that work with DataSense
         DynamicObjectBuilder<?> dynamicObject = builder.createDynamicObject(key
                 .getId());
-
+       /** 
         if (key.getId().equals("ENTITY_TYPE_1")) {
             dynamicObject.addSimpleField("Username", DataType.STRING);
             dynamicObject.addSimpleField("age", DataType.INTEGER);
         } else {
             dynamicObject.addSimpleField("Author", DataType.STRING);
             dynamicObject.addSimpleField("Tittle", DataType.STRING);
-        }
+        }**/
+
+        
         MetaDataModel model = builder.build();
         MetaData metaData = new DefaultMetaData(model);
 
