@@ -18,6 +18,17 @@ import freemarker.template.TemplateNotFoundException;
 
 public class Output {
 
+	/**
+	 * 
+	 * @param map
+	 * @param templateString
+	 * @return String transformed by Template
+	 * @throws TemplateNotFoundException
+	 * @throws MalformedTemplateNameException
+	 * @throws ParseException
+	 * @throws IOException
+	 * @throws TemplateException
+	 */
 	public String outPut(Map<String, Object> map, String templateString) throws TemplateNotFoundException,
 			MalformedTemplateNameException, ParseException, IOException, TemplateException {
 

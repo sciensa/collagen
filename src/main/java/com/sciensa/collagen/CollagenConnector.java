@@ -27,7 +27,7 @@ public class CollagenConnector {
      *
      * @param payload to be used to generate a conversion.
      * @param template to be used to generate a conversion.
-     * @return Json converted
+     * @return String transformed by template
      */
     @Processor
     public String collagen(String payload, String template) throws TemplateNotFoundException, MalformedTemplateNameException, ParseException, IOException, TemplateException {

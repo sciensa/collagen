@@ -11,11 +11,21 @@ import com.google.gson.reflect.TypeToken;
 
 public class Input {
 
+	/**
+	 * 
+	 * @param payload
+	 * @return Map<String, Object> transformed by input
+	 */
 	public Map<String, Object> process(String payload) {
 		Map<String, Object> map = this.processJSON(payload);
 		return map;
 	}
 
+	/**
+	 * 
+	 * @param payload
+	 * @return Map<String, Object> transformed by json
+	 */
 	private Map<String, Object> processJSON(String payload) {
 
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
