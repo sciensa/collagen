@@ -1,6 +1,11 @@
 # Collagen Anypoint Connector
 
 Required DevKit - http://studio.mulesoft.org/r4/devkit install in your Annypoint Studio.
+This plugin uses freemarker language templates to effect conversions based on json or soap templates.
+Your input works with json.
+
+Project Example
+https://github.com/sciensa/collagen-example
 
 [Connector description including destination service or application with]
 
