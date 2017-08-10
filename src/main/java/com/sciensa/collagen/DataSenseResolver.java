@@ -37,32 +37,12 @@ public class DataSenseResolver {
     @MetaDataKeyRetriever
     public List<MetaDataKey> getMetaDataKeys() throws Exception {
         List<MetaDataKey> keys = new ArrayList<MetaDataKey>();
-
-        //Generate the keys
-        // keys.add(new DefaultMetaDataKey("ENTITY_TYPE_1", "User"));
-        // keys.add(new DefaultMetaDataKey("ENTITY_TYPE_2", "Book"));
-
         return keys;
     }
     
     @MetaDataRetriever
     public MetaData getMetaData(MetaDataKey key) throws Exception {
         DefaultMetaDataBuilder builder = new DefaultMetaDataBuilder();
-        //If you have a Pojo class
-        //PojoMetaDataBuilder<?>  pojoObject=builder.createPojo(Pojo.class);
-
-        //If you use maps as input of your processors that work with DataSense
-        DynamicObjectBuilder<?> dynamicObject = builder.createDynamicObject(key
-                .getId());
-       /** 
-        if (key.getId().equals("ENTITY_TYPE_1")) {
-            dynamicObject.addSimpleField("Username", DataType.STRING);
-            dynamicObject.addSimpleField("age", DataType.INTEGER);
-        } else {
-            dynamicObject.addSimpleField("Author", DataType.STRING);
-            dynamicObject.addSimpleField("Tittle", DataType.STRING);
-        }**/
-
         
         MetaDataModel model = builder.build();
         MetaData metaData = new DefaultMetaData(model);
