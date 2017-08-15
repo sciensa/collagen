@@ -9,6 +9,11 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * 
+ * @author Douglas Pimentel Rodrigues
+ * Class that maps the input for processing
+ */
 public class Input {
 
 	/**

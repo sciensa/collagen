@@ -7,6 +7,11 @@ import freemarker.template.MalformedTemplateNameException;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateNotFoundException;
 
+/**
+ * 
+ * @author Douglas Pimentel Rodrigues
+ * Class responsible for processing transformations
+ */
 public class Process {
 
 	/**

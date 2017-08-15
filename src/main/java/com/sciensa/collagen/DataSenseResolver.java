@@ -18,6 +18,7 @@ import org.mule.common.metadata.builder.DynamicObjectBuilder;
 import org.mule.common.metadata.datatype.DataType;
 
 /**
+ * @author Douglas Pimentel Rodrigues
  * Category which can differentiate between input or output MetaDataRetriever
  */
 @MetaDataCategory
