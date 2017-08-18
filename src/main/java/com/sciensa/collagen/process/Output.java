@@ -16,6 +16,12 @@ import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateNotFoundException;
 
+/**
+ * 
+ * @author Douglas Pimentel Rodrigues
+ * Class processes the template for output
+ *
+ */
 public class Output {
 
 	/**
