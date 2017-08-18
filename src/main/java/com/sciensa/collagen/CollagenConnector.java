@@ -44,9 +44,7 @@ public class CollagenConnector {
      */
     @Processor
     public String processjson(String payload, String template) throws TemplateNotFoundException, MalformedTemplateNameException, ParseException, IOException, TemplateException {
-        /*
-         * MESSAGE PROCESSOR CODE GOES HERE
-         */
+    
     	Process process = new Process();
 		String result = process.processJSON(payload,template);
         return result;
@@ -104,5 +102,4 @@ public class CollagenConnector {
     public void setConfig(ConnectorConfig config) {
         this.config = config;
     }
-
 }
