@@ -3,6 +3,7 @@ package com.sciensa.collagen.junit;
 import java.io.IOException;
 
 import org.junit.Test;
+import org.mule.api.annotations.display.Text;
 
 import com.sciensa.collagen.CollagenConnector;
 import com.sciensa.collagen.process.Process;
@@ -145,7 +146,7 @@ public class ProcessTest {
                 "\t\t</v3:criarAlterarServicoRequest>\n" +
                 "   </soapenv:Body>\n" +
                 "</soapenv:Envelope>";
-		String result = connector.processxml(payload,template);
+		String result = connector.processxml(payload,template,template);
 		Assert.assertNotNull(result);
 	}
 
