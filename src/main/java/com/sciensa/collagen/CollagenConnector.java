@@ -23,11 +23,6 @@ import freemarker.template.TemplateNotFoundException;
 
 import org.json.JSONObject;
 import org.json.XML;
-import org.mule.api.annotations.MetaDataKeyRetriever;
-import org.mule.api.annotations.MetaDataRetriever;
-import java.util.List;
-import org.mule.common.metadata.MetaDataKey;
-import org.mule.common.metadata.MetaData;
 
 /**
  * 
@@ -126,14 +121,4 @@ public class CollagenConnector {
     public void setConfig(ConnectorConfig config) {
         this.config = config;
     }
-
-	@MetaDataKeyRetriever
-	public List<MetaDataKey> getKeys() throws Exception {
-		return null;
-	}
-
-	@MetaDataRetriever
-	public MetaData getMetaData(MetaDataKey key) throws Exception {
-		return null;
-	}
 }
