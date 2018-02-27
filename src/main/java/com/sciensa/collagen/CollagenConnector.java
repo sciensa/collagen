@@ -23,6 +23,11 @@ import freemarker.template.TemplateNotFoundException;
 
 import org.json.JSONObject;
 import org.json.XML;
+import org.mule.api.annotations.MetaDataKeyRetriever;
+import org.mule.api.annotations.MetaDataRetriever;
+import java.util.List;
+import org.mule.common.metadata.MetaDataKey;
+import org.mule.common.metadata.MetaData;
 
 /**
  * 
@@ -107,10 +112,10 @@ public class CollagenConnector {
         String xmlToJson = xmlJSONObj.toString(PRETTY_PRINT_INDENT_FACTOR);
         
         if(null != template_schema && !"".equals(template_schema)){
-        	String result = process.processJSON(xmlToJson,template);
+        	String result = process.processJSON(xmlToJson,template_schema);
             return result;
         }
-		String result = process.processJSON(xmlToJson,template_schema);
+		String result = process.processJSON(xmlToJson, template);
         return result;
     }
 
@@ -121,4 +126,14 @@ public class CollagenConnector {
     public void setConfig(ConnectorConfig config) {
         this.config = config;
     }
+
+	@MetaDataKeyRetriever
+	public List<MetaDataKey> getKeys() throws Exception {
+		return null;
+	}
+
+	@MetaDataRetriever
+	public MetaData getMetaData(MetaDataKey key) throws Exception {
+		return null;
+	}
 }
